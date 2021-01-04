@@ -3,7 +3,7 @@
 /test/
 
 # top level source
-my-element.js
-my-element.js.map
-my-element.d.ts
-my-element.d.ts.map
+save-element.js
+save-element.js.map
+save-element.d.ts
+save-element.d.ts.map

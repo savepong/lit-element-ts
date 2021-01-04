@@ -20,8 +20,8 @@ import {LitElement, html, customElement, property, css} from 'lit-element';
  * @slot - This element has a slot
  * @csspart button - The button
  */
-@customElement('my-element')
-export class MyElement extends LitElement {
+@customElement('save-element')
+export class SaveElement extends LitElement {
   static styles = css`
     :host {
       display: block;
@@ -35,7 +35,7 @@ export class MyElement extends LitElement {
    * The name to say "Hello" to.
    */
   @property()
-  name = 'World';
+  name = 'Savepong';
 
   /**
    * The number of times the button has been clicked.
@@ -64,6 +64,6 @@ export class MyElement extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'my-element': MyElement;
+    'save-element': SaveElement;
   }
 }
