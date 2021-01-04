@@ -14,7 +14,7 @@ suite('save-element', () => {
     assert.shadowDom.equal(
       el,
       `
-      <h1>Hello, World!</h1>
+      <h1>Hello, Savepong!</h1>
       <button part="button">Click Count: 0</button>
       <slot></slot>
     `
@@ -41,7 +41,7 @@ suite('save-element', () => {
     assert.shadowDom.equal(
       el,
       `
-      <h1>Hello, World!</h1>
+      <h1>Hello, Savepong!</h1>
       <button part="button">Click Count: 1</button>
       <slot></slot>
     `
