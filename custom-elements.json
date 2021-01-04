@@ -10,7 +10,7 @@
           "name": "name",
           "description": "The name to say \"Hello\" to.",
           "type": "string",
-          "default": "\"World\""
+          "default": "\"Savepong\""
         },
         {
           "name": "count",
@@ -25,7 +25,7 @@
           "attribute": "name",
           "description": "The name to say \"Hello\" to.",
           "type": "string",
-          "default": "\"World\""
+          "default": "\"Savepong\""
         },
         {
           "name": "count",
