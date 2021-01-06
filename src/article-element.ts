@@ -1,16 +1,9 @@
-import { LitElement, html } from 'lit-element'
+import { LitElement, html, property } from 'lit-element'
 
 class ArticleElement extends LitElement 
 {
-  static get properties() {
-    return {
-      text: { type: String }
-    }
-  }
-
-  constructor() {
-    super()
-  }
+  @property({ type: String })
+  text = ''
 
   render() {
     return html`

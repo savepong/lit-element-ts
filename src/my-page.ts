@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit-element'
+import { LitElement, html, property } from 'lit-element'
 import './article-element'
 
 function headerTemplate(title: string) {
@@ -13,21 +13,14 @@ function footerTemplate() {
   return html`<footer>Your footer here.</footer>`
 }
 
-class MyPage extends LitElement {
-  static get properties() {
-    return {
-      article: {
-        attribute: false,
-      }
-    }
-  }
+class MyPage extends LitElement
+{
 
-  constructor() {
-    super();
-    this.article = {
-      title: 'My Nifty Article',
-      text: 'Some witty text.'
-    }
+  @property({ type: Object })
+  article = {
+    title: 'My Nifty Article',
+    text: 'Some witty text.',
+    attribute: false,
   }
 
   render() {

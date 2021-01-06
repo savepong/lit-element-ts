@@ -1,16 +1,13 @@
-import { LitElement, html } from 'lit-element'
+import { LitElement, html, property } from 'lit-element'
 
 class LoadingElement extends LitElement
 {
-  static get properties() {
-    return {
-      message: { type: String}
-    }
-  }
+  @property({ type: String })
+  message = 'loading';
+
   constructor() {
     super();
-    this.message = 'loading';
-    this.addEventListener('stuff-loaded', (e) => { this.message = e.detail })
+    this.addEventListener('stuff-loaded', () => { this.message = '' })
     this.loadStuff();
   }
   render() {

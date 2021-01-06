@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit-element'
+import { LitElement, html, property } from 'lit-element'
 
 class MyElement extends LitElement {
   static get properties() {
@@ -9,15 +9,19 @@ class MyElement extends LitElement {
     }
   }
 
-  constructor() {
-    super();
-    this.myString = 'Hello World';
-    this.myArray = ['an', 'array', 'of', 'test', 'data'];
-    this.myBool = true;
-    this.prop1 = 'mydiv';
-    this.prop2 = true;
-    this.prop3 = 'The Cat'
-  }
+  @property({ type: String })
+  myString = 'Hello World';
+
+  @property({ type: Array })
+  myArray = ['an', 'array', 'of', 'test', 'data'];
+
+  @property({ type: Boolean })
+  myBool = true;
+
+  @property()
+  myProp1 = 'myDiv';
+  myProp2 = true;
+  myProp3 = 'The Cat';
 
   render() {
     return html`
@@ -25,18 +29,18 @@ class MyElement extends LitElement {
       <p>${this.myString}</p>
 
       <!-- attribute binding -->
-      <div id="${this.prop1}">Attribute binding</div>
+      <div id="${this.myProp1}">Attribute binding</div>
 
       <!-- boolean attribute binding -->
       <div>
         boolean attribute binding
-        <input type="text" ?disabled="${this.prop2}"/>
+        <input type="text" ?disabled="${this.myProp2}"/>
       </div>
 
       <!-- property binding -->
       <div>
         property binding
-        <input type="text" .value="${this.prop3}"/>
+        <input type="text" .value="${this.myProp3}"/>
       </div>
 
       <!-- event handler binding -->
@@ -63,7 +67,7 @@ class MyElement extends LitElement {
     `;
   }
 
-  clickHandler(e) {
+  clickHandler(e: { type: any; }) {
     alert(e.type);
   }
 }
