@@ -4,8 +4,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { LitElement, html, property } from 'lit-element';
-class MyElement extends LitElement {
+import { LitElement, customElement, html, property, css } from 'lit-element';
+let MyElement = class MyElement extends LitElement {
     constructor() {
         super(...arguments);
         this.myString = 'Hello World';
@@ -15,17 +15,10 @@ class MyElement extends LitElement {
         this.myProp2 = true;
         this.myProp3 = 'The Cat';
     }
-    static get properties() {
-        return {
-            myString: { type: String },
-            myArray: { type: Array },
-            myBool: { type: Boolean }
-        };
-    }
     render() {
         return html `
       <!-- text binding -->
-      <p>${this.myString}</p>
+      <p class="prime">${this.myString}</p>
 
       <!-- attribute binding -->
       <div id="${this.myProp1}">Attribute binding</div>
@@ -66,7 +59,12 @@ class MyElement extends LitElement {
     clickHandler(e) {
         alert(e.type);
     }
-}
+};
+MyElement.styles = css `
+    :host p {
+      color: blue;
+    }
+  `;
 __decorate([
     property({ type: String })
 ], MyElement.prototype, "myString", void 0);
@@ -79,5 +77,8 @@ __decorate([
 __decorate([
     property()
 ], MyElement.prototype, "myProp1", void 0);
-customElements.define('my-element', MyElement);
+MyElement = __decorate([
+    customElement('my-element')
+], MyElement);
+export { MyElement };
 //# sourceMappingURL=my-element.js.map

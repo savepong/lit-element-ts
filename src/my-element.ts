@@ -1,13 +1,12 @@
-import { LitElement, html, property } from 'lit-element'
+import { LitElement, customElement, html, property, css } from 'lit-element'
 
-class MyElement extends LitElement {
-  static get properties() {
-    return {
-      myString: { type: String },
-      myArray: { type: Array },
-      myBool: { type: Boolean }
+@customElement('my-element')
+export class MyElement extends LitElement {
+  static styles = css`
+    :host p {
+      color: blue;
     }
-  }
+  `;
 
   @property({ type: String })
   myString = 'Hello World';
@@ -26,7 +25,7 @@ class MyElement extends LitElement {
   render() {
     return html`
       <!-- text binding -->
-      <p>${this.myString}</p>
+      <p class="prime">${this.myString}</p>
 
       <!-- attribute binding -->
       <div id="${this.myProp1}">Attribute binding</div>
@@ -72,4 +71,8 @@ class MyElement extends LitElement {
   }
 }
 
-customElements.define('my-element', MyElement)
+declare global {
+  interface HTMLElementTagNameMap {
+    'my-element': MyElement;
+  }
+}
