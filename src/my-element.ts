@@ -66,7 +66,7 @@ export class MyElement extends LitElement {
     `;
   }
 
-  clickHandler(e: { type: any; }) {
+  clickHandler(e: { type: object }) {
     alert(e.type);
   }
 }
