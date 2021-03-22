@@ -1,4 +1,4 @@
-# LitElement TypeScript starter 
+# LitElement TypeScript starter
 
 This project includes a sample component using LitElement with TypeScript.
 
@@ -48,20 +48,21 @@ To run the dev server and open the project in a new browser tab:
 npm run serve
 ```
 
-There is a development HTML file located at `/dev/index.html` that you can view at http://localhost:8000/dev/index.html.
+There is a development HTML file located at `/demo/index.html` that you can view at http://localhost:8000/demo/index.html.
 
 ## Editing
 
 If you use VS Code, we highly reccomend the [lit-plugin extension](https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin), which enables some extremely useful features for lit-html templates:
-  - Syntax highlighting
-  - Type-checking
-  - Code completion
-  - Hover-over docs
-  - Jump to definition
-  - Linting
-  - Quick Fixes
-  
-  The project is setup to reccomend lit-plugin to VS Code users if they don't already have it installed.
+
+- Syntax highlighting
+- Type-checking
+- Code completion
+- Hover-over docs
+- Jump to definition
+- Linting
+- Quick Fixes
+
+The project is setup to reccomend lit-plugin to VS Code users if they don't already have it installed.
 
 ## Linting
 

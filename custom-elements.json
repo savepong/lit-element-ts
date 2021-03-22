@@ -2,6 +2,135 @@
   "version": "experimental",
   "tags": [
     {
+      "name": "article-element",
+      "path": "./src/article-element.ts",
+      "attributes": [
+        {
+          "name": "text",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "text",
+          "attribute": "text",
+          "type": "string",
+          "default": "\"\""
+        }
+      ]
+    },
+    {
+      "name": "loading-element",
+      "path": "./src/loading-element.ts",
+      "attributes": [
+        {
+          "name": "message",
+          "type": "string",
+          "default": "\"loading\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "message",
+          "attribute": "message",
+          "type": "string",
+          "default": "\"loading\""
+        }
+      ],
+      "events": [
+        {
+          "name": "stuff-loaded"
+        }
+      ]
+    },
+    {
+      "name": "my-element",
+      "path": "./src/my-element.ts",
+      "attributes": [
+        {
+          "name": "myString",
+          "type": "string",
+          "default": "\"Hello World\""
+        },
+        {
+          "name": "myArray",
+          "type": "string[]",
+          "default": "[\"an\",\"array\",\"of\",\"test\",\"data\"]"
+        },
+        {
+          "name": "myBool",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "myProp1",
+          "type": "string",
+          "default": "\"myDiv\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "styles",
+          "type": "CSSResult",
+          "default": "\"css`\\n    :host p {\\n      color: blue;\\n    }\\n  `\""
+        },
+        {
+          "name": "myString",
+          "attribute": "myString",
+          "type": "string",
+          "default": "\"Hello World\""
+        },
+        {
+          "name": "myArray",
+          "attribute": "myArray",
+          "type": "string[]",
+          "default": "[\"an\",\"array\",\"of\",\"test\",\"data\"]"
+        },
+        {
+          "name": "myBool",
+          "attribute": "myBool",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "myProp1",
+          "attribute": "myProp1",
+          "type": "string",
+          "default": "\"myDiv\""
+        },
+        {
+          "name": "myProp2",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "myProp3",
+          "type": "string",
+          "default": "\"The Cat\""
+        }
+      ]
+    },
+    {
+      "name": "my-page",
+      "path": "./src/my-page.ts",
+      "attributes": [
+        {
+          "name": "article",
+          "type": "{ title: string; text: string; attribute: boolean; }",
+          "default": "{\"title\":\"My Nifty Article\",\"text\":\"Some witty text.\",\"attribute\":false}"
+        }
+      ],
+      "properties": [
+        {
+          "name": "article",
+          "attribute": "article",
+          "type": "{ title: string; text: string; attribute: boolean; }",
+          "default": "{\"title\":\"My Nifty Article\",\"text\":\"Some witty text.\",\"attribute\":false}"
+        }
+      ]
+    },
+    {
       "name": "save-element",
       "path": "./src/save-element.ts",
       "description": "An example element.",
@@ -20,6 +149,11 @@
         }
       ],
       "properties": [
+        {
+          "name": "styles",
+          "type": "CSSResult",
+          "default": "\"css`\\n    :host {\\n      display: block;\\n      border: solid 1px gray;\\n      padding: 16px;\\n      max-width: 800px;\\n    }\\n  `\""
+        },
         {
           "name": "name",
           "attribute": "name",
